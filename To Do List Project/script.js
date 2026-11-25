@@ -29,8 +29,14 @@ list.addEventListener(
       saveData();
     }
   },
-  false,
+  
 );
+
+Input.addEventListener("keydown",function(e){
+  if (e.key === "Enter"){
+    addTask();
+  }
+});
 
 function saveData() {
   localStorage.setItem("data", list.innerHTML);
